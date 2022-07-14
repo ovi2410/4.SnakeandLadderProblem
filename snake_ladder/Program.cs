@@ -1,12 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-//Console.WriteLine("Hello, World!");
-static void Main(string[] args)
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SnakeAndLadder
 {
-    //localvariable
-    int rollDice, playerPos = 0;
-    int count = 0;
-    //to generate random number
-    Random random = new Random();
-    //list to check options
-    var list = new List<string> { "no play", "ladder", "snake" };
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int playerPos = 0, rollDice;
+            Random random = new Random();
+            rollDice = random.Next(1, 7);
+            Console.WriteLine("Rolled Dice number is:" + rollDice);
+        }
+    }
 }
